@@ -29,15 +29,13 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "./target/colors-interact-0.0.1-SNAPSHOT.jar"
         target: "/var/www/colors-interact/"
-        # remove the containing "/target/" directory, just include jar
-        strip_components: 1
         rm: true
-#     - name: executing remote ssh commands using password
-#       uses: appleboy/ssh-action@master
-#       with:
-#         host: ${{ secrets.HOST }}
-#         username: ${{ secrets.USERNAME }}
-#         password: ${{ secrets.PASSWORD }}
-#         port: ${{ secrets.PORT }}
-#         script: todo
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: sudo chmod +x /var/www/colors-interact/target/colors-interact-0.0.1-SNAPSHOT.jar && sudo service colors-interact restart
       
