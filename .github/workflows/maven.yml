@@ -26,7 +26,7 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.KEY }}
+        password: ${{ secrets.PASSWORD }}
       with:
         source: "./target/colors-interact-0.0.1-SNAPSHOT.jar"
         target: "/var/www/colors-interact/"
