@@ -1,6 +1,25 @@
+import { CanvasService } from "./modules/services/canvas.service.js";
 import { MovementService } from "./modules/services/movement.service.js";
 
 const movementService = new MovementService();
+const canvasService = new CanvasService();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // var stompClient = null;
 
