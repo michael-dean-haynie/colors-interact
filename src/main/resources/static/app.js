@@ -1,3 +1,7 @@
+import { MovementService } from "./modules/services/movement.service.js";
+
+const movementService = new MovementService();
+
 // var stompClient = null;
 
 // function setConnected(connected) {
