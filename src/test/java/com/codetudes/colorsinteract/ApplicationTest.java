@@ -1,4 +1,4 @@
-package com.codetudes.learnspringwebsockets;
+package com.codetudes.colorsinteract;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

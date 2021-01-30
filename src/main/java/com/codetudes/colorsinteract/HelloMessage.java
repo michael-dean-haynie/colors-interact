@@ -1,4 +1,4 @@
-package com.codetudes.learnspringwebsockets;
+package com.codetudes.colorsinteract;
 
 public class HelloMessage {
 

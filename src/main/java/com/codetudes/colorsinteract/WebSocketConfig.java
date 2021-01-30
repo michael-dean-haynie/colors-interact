@@ -1,4 +1,4 @@
-package com.codetudes.learnspringwebsockets;
+package com.codetudes.colorsinteract;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
