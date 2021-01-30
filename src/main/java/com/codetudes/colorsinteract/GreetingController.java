@@ -1,4 +1,4 @@
-package com.codetudes.learnspringwebsockets;
+package com.codetudes.colorsinteract;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
