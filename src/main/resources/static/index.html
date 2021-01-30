@@ -4,12 +4,11 @@
 <head>
     <title>Colors Interact</title>
     <!-- <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!--    <link href="/main.css" rel="stylesheet">-->
+    <link href="/app.css" rel="stylesheet">
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/sockjs-client/sockjs.min.js"></script>
     <script src="/webjars/stomp-websocket/stomp.min.js"></script>
     <script src="/app.js" type="module"></script>
-    <script src="/sandbox.js"></script>
 </head>
 
 <body>
@@ -19,6 +18,9 @@
             Javascript and reload this page!</h2>
     </noscript>
     <div>This is colors interact! (updated via CD!)</div>
+    <div>
+        <canvas id="board-canvas" width="500" height="500"></canvas>
+    </div>
     <!--    <div id="main-content" class="container">-->
     <!--        <div class="row">-->
     <!--            <div class="col-md-6">-->
