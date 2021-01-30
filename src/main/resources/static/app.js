@@ -1,8 +1,10 @@
 import { CanvasService } from "./modules/services/canvas.service.js";
 import { MovementService } from "./modules/services/movement.service.js";
+import { WebSocketService } from "./modules/services/web-socket.service.js";
 
-const movementService = new MovementService();
 const canvasService = new CanvasService();
+const webSocketService = new WebSocketService(canvasService);
+const movementService = new MovementService(webSocketService);
 
 
 

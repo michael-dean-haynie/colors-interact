@@ -4,12 +4,19 @@ import { DirectionEnum } from "../enums/direction.enum.js";
  * Listens for keyboard events. Determines current direction. Takes action when it changes.
  */
 export class MovementService {
+    // dependency injection
+    webSocketService;
+
     // stack to resolve most recent key pressed/unpressed (could be multiple at a time)
     directionStack = [DirectionEnum.STILL];
 
     lastDirection = DirectionEnum.STILL;
 
-    constructor() {
+    constructor(webSocketService) {
+        // inject dependencies
+        this.webSocketService = webSocketService
+
+
         // listen for keydown events
         window.addEventListener('keydown', (event) => {
             const direction = this.directionFromKeyboardEvent(event);
@@ -49,7 +56,7 @@ export class MovementService {
             this.lastDirection = currentDirection;
 
             // handle
-            console.log(currentDirection);
+            this.webSocketService.sendChangeDirectionCommand(currentDirection);
         }
     }
 
