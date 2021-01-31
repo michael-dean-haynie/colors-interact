@@ -1,2 +1,2 @@
-# colors-interact
+# colors-interact-api
 testing github actions
