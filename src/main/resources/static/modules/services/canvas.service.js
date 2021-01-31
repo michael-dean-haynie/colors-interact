@@ -14,31 +14,6 @@ export class CanvasService {
         this.ctx.translate(0, this.canvas.height);
         this.ctx.scale(1, -1);
 
-        const gameState = {
-            players: [
-                {
-                    x: 10,
-                    y: 10,
-                    r: 54,
-                    g: 184,
-                    b: 142
-                },
-                {
-                    x: 100,
-                    y: 100,
-                    r: 165,
-                    g: 103,
-                    b: 214
-                },
-            ]
-        };
-
-        this.updateBoard(gameState);
-        setTimeout(() => {
-            gameState.players[0].x += 30;
-            gameState.players[1].y += 30;
-            this.updateBoard(gameState);
-        }, 3000);
     }
 
 
@@ -47,9 +22,9 @@ export class CanvasService {
      * @param {*} gameState 
      */
     updateBoard(gameState) {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
         if (gameState) {
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
             // paint each player on the board
             if (gameState.players) {
                 gameState.players.forEach((player) => {
