@@ -2,6 +2,8 @@ package com.codetudes.colorsinteract;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Log4j2
@@ -17,6 +19,11 @@ public class GameLoop {
     private static final int FRAME_RATE = 60;
     // ms in frame
     private static final int FRAME_LENGTH = 1000 / FRAME_RATE;
+
+    @EventListener
+    public void onContextRefreshed(ContextRefreshedEvent event){
+        run();
+    }
 
     public void run() {
         boolean quit = false;

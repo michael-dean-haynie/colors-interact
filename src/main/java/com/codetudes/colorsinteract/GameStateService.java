@@ -5,12 +5,10 @@ import com.codetudes.colorsinteract.models.ChangeDirectionCommand;
 import com.codetudes.colorsinteract.models.GameState;
 import com.codetudes.colorsinteract.models.GameStatePlayer;
 import com.codetudes.colorsinteract.models.NewPlayerCommand;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 @Component

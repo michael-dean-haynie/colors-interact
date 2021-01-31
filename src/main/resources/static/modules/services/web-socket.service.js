@@ -6,6 +6,9 @@ export class WebSocketService {
     // The stomp client to communicate with game server
     stompClient;
 
+    // temporary
+    playerId = Math.random().toString(36).substring(7);
+
     constructor(
         canvasService
     ) {
@@ -25,24 +28,23 @@ export class WebSocketService {
                 const gameState = JSON.parse(message.body);
                 this.canvasService.updateBoard(gameState);
             });
-            this.sendStartGameCommand();
-            setTimeout(() => {
-                this.sendNewPlayerCommand();
-            }, 1000)
+            // this.sendStartGameCommand();
+            this.sendNewPlayerCommand();
+
         });
     }
 
-    sendStartGameCommand() {
-        console.log('sending start game command');
-        this.stompClient.send("/app/game/start", {}, '');
-    }
+    // sendStartGameCommand() {
+    //     console.log('sending start game command');
+    //     this.stompClient.send("/app/game/start", {}, '');
+    // }
 
     sendNewPlayerCommand() {
         console.log('sending new player command');
         this.stompClient.send("/app/player/new", {}, JSON.stringify({
             player: {
                 name: 'Michael',
-                id: 'Michael'
+                id: this.playerId
             }
         }));
     }
@@ -52,7 +54,7 @@ export class WebSocketService {
         this.stompClient.send("/app/player/change-direction", {}, JSON.stringify({
             player: {
                 name: 'Michael',
-                id: 'Michael'
+                id: this.playerId
             },
             direction: direction
         }));

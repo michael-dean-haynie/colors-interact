@@ -1,7 +1,6 @@
 package com.codetudes.colorsinteract;
 
 import com.codetudes.colorsinteract.models.ChangeDirectionCommand;
-import com.codetudes.colorsinteract.models.GameState;
 import com.codetudes.colorsinteract.models.NewPlayerCommand;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +17,11 @@ public class ClientController {
     @Autowired
     private GameLoop gameLoop;
 
-    @MessageMapping("/game/start")
-    public void startGame() throws Exception {
-        log.info("Received start game message from client");
-        gameLoop.run();
-    }
+//    @MessageMapping("/game/start")
+//    public void startGame() throws Exception {
+//        log.info("Received start game message from client");
+//        gameLoop.run();
+//    }
 
     @MessageMapping("/player/new")
     public void newPlayer(NewPlayerCommand newPlayerCommand) throws Exception {
