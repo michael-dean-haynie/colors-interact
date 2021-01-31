@@ -18,7 +18,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/colors-interact-websocket").withSockJS();
+        registry.addEndpoint("/colors-interact-websocket").withSockJS().setSupressCors(true);
     }
 
 }
