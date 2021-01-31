@@ -22,7 +22,8 @@ public class GameLoop {
 
     @EventListener
     public void onContextRefreshed(ContextRefreshedEvent event){
-        run();
+        // temp disable
+        // run();
     }
 
     public void run() {
