@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.codetudes</groupId>
-	<artifactId>colors-interact</artifactId>
+	<artifactId>colors-interact-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>colors-interact</name>
-	<description>colors-interact</description>
+	<name>colors-interact-api</name>
+	<description>colors-interact-api</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
