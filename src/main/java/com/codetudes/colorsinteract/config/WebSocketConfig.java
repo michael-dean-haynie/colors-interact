@@ -1,4 +1,4 @@
-package com.codetudes.colorsinteract;
+package com.codetudes.colorsinteract.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
@@ -18,7 +18,8 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/colors-interact-websocket").setAllowedOrigins("*").withSockJS().setSupressCors(true);
+//        registry.addEndpoint("/ws").setAllowedOrigins("*").withSockJS().setSupressCors(true);
+        registry.addEndpoint("/ws").setAllowedOrigins("*");
     }
 
 }

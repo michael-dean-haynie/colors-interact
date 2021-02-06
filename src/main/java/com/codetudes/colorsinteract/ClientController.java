@@ -1,10 +1,11 @@
 package com.codetudes.colorsinteract;
 
-import com.codetudes.colorsinteract.models.ChangeDirectionCommand;
-import com.codetudes.colorsinteract.models.NewPlayerCommand;
+import com.codetudes.colorsinteract.models.old.ChangeDirectionCommand;
+import com.codetudes.colorsinteract.models.old.NewPlayerCommand;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 
 @Log4j2
@@ -17,10 +18,16 @@ public class ClientController {
     @Autowired
     private GameLoop gameLoop;
 
-//    @MessageMapping("/game/start")
-//    public void startGame() throws Exception {
-//        log.info("Received start game message from client");
-//        gameLoop.run();
+    @Autowired
+    private SimpMessagingTemplate template;
+
+//    @MessageMapping("game/new/{type}")
+//    public void startGame(@DestinationVariable String type) throws Exception {
+//        log.info("startGame({}) endpoint hit", type);
+//        if (type == "sandbox"){
+//
+//        }
+//
 //    }
 
     @MessageMapping("/player/new")

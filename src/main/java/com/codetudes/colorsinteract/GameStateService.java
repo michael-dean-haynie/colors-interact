@@ -1,10 +1,10 @@
 package com.codetudes.colorsinteract;
 
 import com.codetudes.colorsinteract.enums.DirectionEnum;
-import com.codetudes.colorsinteract.models.ChangeDirectionCommand;
-import com.codetudes.colorsinteract.models.GameState;
-import com.codetudes.colorsinteract.models.GameStatePlayer;
-import com.codetudes.colorsinteract.models.NewPlayerCommand;
+import com.codetudes.colorsinteract.models.old.ChangeDirectionCommand;
+import com.codetudes.colorsinteract.models.old.GameState;
+import com.codetudes.colorsinteract.models.old.GameStatePlayer;
+import com.codetudes.colorsinteract.models.old.NewPlayerCommand;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Component;

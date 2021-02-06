@@ -1,6 +1,6 @@
 package com.codetudes.colorsinteract;
 
-import com.codetudes.colorsinteract.models.GameState;
+import com.codetudes.colorsinteract.models.old.GameState;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;

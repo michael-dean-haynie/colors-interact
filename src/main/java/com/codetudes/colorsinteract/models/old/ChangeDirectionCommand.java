@@ -1,4 +1,4 @@
-package com.codetudes.colorsinteract.models;
+package com.codetudes.colorsinteract.models.old;
 
 import com.codetudes.colorsinteract.enums.DirectionEnum;
 import lombok.Data;

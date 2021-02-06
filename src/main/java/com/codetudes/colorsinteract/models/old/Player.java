@@ -1,4 +1,4 @@
-package com.codetudes.colorsinteract.models;
+package com.codetudes.colorsinteract.models.old;
 
 import lombok.Data;
 
